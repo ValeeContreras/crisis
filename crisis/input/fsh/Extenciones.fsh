@@ -25,3 +25,12 @@ Context: HealthcareService
 
 * value[x] only code
 * valueCode from  VSServicios (required)
+
+Extension: Prestaciones
+Id: Prestaciones
+Title: "Prestaciones"
+Description: "Previsones de la APS"
+Context: ServiceRequest
+
+* value[x] only code
+* valueCode from VSPrestaciones (required)

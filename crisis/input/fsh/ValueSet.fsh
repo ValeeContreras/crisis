@@ -15,3 +15,12 @@ Description: "Servicio que dara el prestador"
 * ^experimental = false
 
 * include codes from system CSServicios
+
+ValueSet: VSPrestaciones
+Id: VSPrestaciones
+Title: "VS Prestaciones"
+Description: "Prestaciones"
+* ^status = #active
+* ^experimental = false
+
+* include codes from system CSPrestaciones
