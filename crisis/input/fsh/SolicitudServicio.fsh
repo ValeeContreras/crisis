@@ -2,30 +2,35 @@ Profile: SolicitudServicio
 Parent: ServiceRequest
 Id: SolicitudServicio
 Title: "Perfil de la Solicitud del Servicio"
-Description: "Solicitud del Servicio"
+Description: "Este es el perfil de la Solicitud del Servicio"
 
 * extension contains Prestaciones named prestaciones 0..1 MS
-  * ^short = "Prestación que solicita el paciente" 
+  * ^short = "Prestación que solicita el paciente." 
 
 * status 1..1
+  * ^short = "Estado de la solicitud de servicio."
 * status from http://hl7.org/fhir/ValueSet/request-status
 
 * intent 1..1 
+  * ^short = "Intención de la solicitud del servicio."
 * intent from http://hl7.org/fhir/ValueSet/request-intent 
 
 * priority 1..1
+  * ^short = "Indica con qué rapidez se debe atender la ServiceRequest con respecto a otras solicitudes."
 * priority from http://hl7.org/fhir/ValueSet/request-priority
 
 * subject 1..1
+  * ^short = "La persona que inició la solicitud."
 * subject only Reference(Paciente)
 
 * authoredOn 1..1
+  * ^short = "Fecha y hora de la solicitud."
 
 Instance: EjemploSolicitudServicio1
 InstanceOf: SolicitudServicio
 Usage: #example
-Title: "EjemploSolicitudServicio1"
-Description: "algo"
+Title: "Ejemplo Solicitud Servicio 1"
+Description: "Ejemplo Solicitud Servicio 1"
 
 * status = #active
 * intent = #order
@@ -37,8 +42,8 @@ Description: "algo"
 Instance: EjemploSolicitudServicio2
 InstanceOf: SolicitudServicio
 Usage: #example
-Title: "EjemploSolicitudServicio1"
-Description: "algo"
+Title: "Ejemplo Solicitud Servicio 2"
+Description: "Ejemplo Solicitud Servicio 2"
 
 * status = #active
 * intent = #order
