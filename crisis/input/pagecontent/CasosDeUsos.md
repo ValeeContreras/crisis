@@ -27,6 +27,7 @@ Este caso de uso describe la solicitud de una hora médica solicitada por el pac
 ##### Operación
 Se utiliza el método **POST** para enviar una solicitud de creación de una nueva cita. Quedando la siguiente transacción:
 <br>
+
 POST [URL_Base]/Appointment/
 
 #### Caso de Uso 2: Acepto/Rechazo de hora 
@@ -50,6 +51,7 @@ En el caso de que el paciente rechace la cita médica se le busca otra hora y en
 ##### Operación
 Se utiliza el metodo **PUT** para poder aceptar o rechazar la cita medica. Quedando la siguiente transacción:
 <br>
+
 PUT [URL_Base]/Appointment/{id_Appointment}
 
 #### Caso de uso 3: Reagendamiento de hora
@@ -63,6 +65,7 @@ En caso de errores o cambios de información de la cita, estos datos incorrectos
 ##### Operación
 Se utiliza el metodo **PUT** para poder actualizar la información con respecto a la cita medica. Quedando la siguiente transacción:
 <br>
+
 PUT [URL_Base]/Appointment{id_Appointment}
 
 #### Caso de uso 4: Lectura de la hora
@@ -76,5 +79,28 @@ El ususario puede acceder a la vizualización de sus citas para revisar el histo
 
 ##### Operaciones
 Se utiliza el metodo **GET** para poder acceder a la información  de las citas medicas y sus detalles. Quedando las siguientes transacciónes:
+<br>
 
-**INSERTAR TRANSACCIONES**
+1.- Lectura con el identificador del paciente y desde una fecha en adelante de las citas médicas:
+<br>
+
+GET [URL_Base] Appointment?date=ge{fecha}&patient=Patient.identifier={identifier}
+<br>
+
+2.- Lectura con el identificador del paciente y desde una fecha hacia atras de las citas médicas:
+<br>
+
+GET [URL_Base] Appointment?date=le{fehca}&patient=Patient.identifier={identifier}
+<br>
+
+3.- Lectura con el identificador del paciente y un rango de fechas de las citas médicas:
+<br>
+
+GET [URL_Base] Appointment?date=ge{fecha}&date=le{fehca}&patient=Patient.identifier={identifier}
+<br>
+
+4.- Lectura con el identificador del paciente de las citas médicas:
+<br>
+
+GET [URL_Base] Appointment?patient=Patient.identifier={identifier}
+<br>
