@@ -45,9 +45,16 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
-#   index.md:
-#     title: Example Home
+pages:
+  index.md:
+    title: Example Home
+  Objetivos.md:
+    title: Objetivos
+  CasosDeUsos.md:
+    title: Casos de Usos
+  Seguridad.md:
+    title: Seguridad
+  
 #   implementation.xml:
 #   examples.xml:
 #     title: Examples Overview
@@ -78,6 +85,9 @@ dependencies:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Objetivos: Objetivos.html
+  Casos de usos: CasosDeUsos.html
+  Seguridad: Seguridad.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
