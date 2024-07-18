@@ -4,8 +4,10 @@ Para comprender la seguridad en el acceso a una API FHIR, primero es útil visua
 A continuación, se muestra el diagrama de secuencia que detalla cada uno de los pasos involucrados en este proceso.
 <br>
 
-DIAGRAMASEGURIDAD
-
+<div align="center" >
+  {% include Seguridad.svg %}
+</div>
+<br clear="all"/>
 
 Ahora, se explicará paso a paso cómo se maneja la autenticación y autorización mediante el uso de un token para acceder a una API FHIR. A continuación, se describen los pasos necesarios para solicitar, validar y utilizar un token para acceder a los recursos FHIR de manera segura.
 <br>

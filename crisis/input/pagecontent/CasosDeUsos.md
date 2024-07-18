@@ -1,7 +1,10 @@
 ### Casos de uso del Proyecto
 Esta guía de implementación es diseñada para el uso de datos enfocados en la Atención Primaria de Salud (APS) para Agenda. A continuacion se puede observar su diagrama de secuencia: 
 
-DIAGRAMA1
+<div align="center" >
+  {% include Secuencia.svg %}
+</div>
+<br clear="all"/>
 
 ### Casos de usos
 El proyecto se separa en 4 Casos de Usos, los cuales son detallados a continuación:
@@ -16,7 +19,10 @@ Este caso de uso describe la solicitud de una hora médica solicitada por el pac
 * Previsión
 <br>
 
-DIAGRAMA 2
+<div align="center" >
+  {% include C1.svg %}
+</div>
+<br clear="all"/>
 
 ##### Operación
 Se utiliza el método **POST** para enviar una solicitud de creación de una nueva cita. Quedando la siguiente transacción:
@@ -36,7 +42,10 @@ El paciente puede aceptar o rechazar esta hora médica. Dependientemente de la d
 En el caso de que el paciente acepte la cita médica cambia el estado a booked.
 En el caso de que el paciente rechace la cita médica se le busca otra hora y en el caso que vuelva a rechazar la segunda cita médica quedara en lista de espera.
 
-DIAGRAMA3
+<div align="center" >
+  {% include C2.svg %}
+</div>
+<br clear="all"/>
 
 ##### Operación
 Se utiliza el metodo **PUT** para poder aceptar o rechazar la cita medica. Quedando la siguiente transacción:
@@ -46,7 +55,10 @@ PUT [URL_Base]/Appointment/{id_Appointment}
 #### Caso de uso 3: Reagendamiento de hora
 En caso de errores o cambios de información de la cita, estos datos incorrectos se pueden actualizar.
 
-DIAGRAMA4
+<div align="center" >
+  {% include C3.svg %}
+</div>
+<br clear="all"/>
 
 ##### Operación
 Se utiliza el metodo **PUT** para poder actualizar la información con respecto a la cita medica. Quedando la siguiente transacción:
@@ -57,7 +69,10 @@ PUT [URL_Base]/Appointment{id_Appointment}
 El ususario puede acceder a la vizualización de sus citas para revisar el historial y detalles de sus citas médicas.
 <br>
 
-DIAGRAMA5
+<div align="center" >
+  {% include C4.svg %}
+</div>
+<br clear="all"/>
 
 ##### Operaciones
 Se utiliza el metodo **GET** para poder acceder a la información  de las citas medicas y sus detalles. Quedando las siguientes transacciónes:
